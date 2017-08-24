@@ -5,7 +5,7 @@ is_git() {
 git_prompt() {
     local ig=$(is_git)
     if [ "$ig" = "true" ]; then
-        echo "%B%F%{$fg[cyan]%}[git:$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)%B%F%{$fg[green]%}]%{$reset_color%}"
+        echo "%B%F%{$fg[cyan]%}[git:$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)%B%F%{$fg[cyan]%}]%{$reset_color%}"
     fi
 }
 PROMPT='%{$fg_bold[white]%}%c ${ret_status} %{$reset_color%}'
