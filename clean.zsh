@@ -2,7 +2,7 @@ ARROW="❯"
 local ret_status="%(?:$ARROW :%{$fg_bold[red]%}$ARROW )"
 
 PROMPT='%B%F%c $ret_status'
-RPROMPT='%B%F%{$fg[blue]%}$(git_prompt_info)%{$reset_color%}'
+RPROMPT='%B%F%{$fg[blue]%}$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}%B%F%{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[yellow]%}⇡%{$reset_color%}%B%F%{$fg[blue]%}"
