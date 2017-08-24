@@ -1,10 +1,10 @@
 ARROW="❯"
+local ret_status="%(?:$ARROW :%{$fg_bold[red]%}$ARROW )"
 
-PROMPT='%B%F%c %{$reset_color%}$(git_prompt_status)%{$reset_color%}%B%F$ARROW %{$reset_color%}'
-RPROMPT='%B%F$(git_prompt_info)%{$reset_color%}'
+PROMPT='%B%F%c $ret_status'
+RPROMPT='%B%F%{$fg[blue]%}$(git_prompt_info)%{$reset_color%}'
 
-ZSH_THEME_GIT_PROMPT_DIRTY=""
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[red]%}✹ "
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[blue]%}✚ "
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[magenta]%}★ "
-ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[yellow]%}⬆ "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}%B%F%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[yellow]%}⇡%{$reset_color%}%B%F%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="%{$fg[yellow]%}⇣%{$reset_color%}%B%F%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=
