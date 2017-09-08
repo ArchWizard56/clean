@@ -8,8 +8,8 @@ git_prompt() {
         echo "%B%F%{$fg[cyan]%}[git:$(git_current_branch)$(parse_git_dirty)$(git_prompt_status)%B%F%{$fg[cyan]%}]%{$reset_color%}"
     fi
 }
-PROMPT='%{$fg_bold[white]%}%c ${ret_status} %{$reset_color%}'
-RPROMPT='$(git_prompt)'
+PROMPT="%{$fg_bold[white]%}%c ${ret_status} %{$reset_color%}"
+RPROMPT="$(git_prompt)"
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}%B%F%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[yellow]%}⇡%{$reset_color%}%B%F%{$fg[cyan]%}"
